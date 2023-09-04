@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+#formContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input[type="text"], input[type="email"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px; /* Añadido para dar espacio entre botones si están alineados */
+}
+#saveBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+#closeBtn {
+    background-color: #f44336;
+    color: white;
+}
+#searchBtn {
+    background-color: #2196F3; /* Color azul para el botón de búsqueda */
+    color: white;
+}
+
+.searchContainer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Esto hará que los elementos dentro de la sección de búsqueda estén espaciados */
+    align-items: center;
+}
+
+.searchContainer label, .searchContainer input, .searchContainer button {
+    margin: 0; /* Esto eliminará los márgenes para estos elementos en la sección de búsqueda */
+}
+
+.searchContainer input[type="text"] {
+    flex: 1; /* Esto hará que el input tome el espacio disponible */
+    margin-right: 10px; /* Esto dará un pequeño espacio entre el input y el botón */
+}

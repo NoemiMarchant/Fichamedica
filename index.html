@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="scripts.js" defer></script>
+    <title>Ficha Médica</title>
+</head>
+<body>
+<div id="formContainer">
+    
+    <!-- Sección de búsqueda -->
+    <div class="searchContainer">
+        <label for="searchRut">Buscar por RUT:</label>
+        <input type="text" id="searchRut">
+        <button type="button" id="searchBtn">Buscar</button>
+    </div>
+    
+    <hr>
+
+    <form id="medicalForm" action="procesar.php" method="post">
+        <input type="hidden" name="action" value="save">
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" required>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label for="estadoCivil">Estado civil:</label>
+        <select id="estadoCivil" name="estadoCivil" required>
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viudo">Viudo</option>
+        </select>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios"></textarea>
+
+        <div class="buttonContainer">
+            <button type="button" id="saveBtn">Guardar</button>
+            <button type="reset" id="clearBtn">Limpiar</button>
+            <button type="button" id="closeBtn">Cerrar</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
